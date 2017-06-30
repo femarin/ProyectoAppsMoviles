@@ -1,0 +1,233 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cr"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/lv2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9"
+            />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/lh1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05"
+            />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/lv1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1"
+            />
+
+        <android.support.constraint.Guideline
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/lh2"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2"/>
+        <android.support.constraint.Guideline
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/lh3"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35"/>
+        <android.support.constraint.Guideline
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/lh4"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"/>
+        <android.support.constraint.Guideline
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/lh5"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/lh6"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/lh2"
+            app:layout_constraintLeft_toRightOf="@+id/lv1"
+            app:layout_constraintRight_toLeftOf="@+id/lv2"
+            app:layout_constraintBottom_toTopOf="@+id/lh3">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:textColor="@android:color/white"
+                android:id="@+id/tx2" />
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Ver"
+                android:background="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:id="@+id/b2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/lh3"
+            app:layout_constraintLeft_toRightOf="@+id/lv1"
+            app:layout_constraintRight_toLeftOf="@+id/lv2"
+            app:layout_constraintBottom_toTopOf="@+id/lh4">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:textColor="@android:color/white"
+                android:id="@+id/tx3"
+                />
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Ver"
+                android:background="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:id="@+id/b3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/lh4"
+            app:layout_constraintLeft_toRightOf="@+id/lv1"
+            app:layout_constraintRight_toLeftOf="@+id/lv2"
+            app:layout_constraintBottom_toTopOf="@+id/lh5">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:textColor="@android:color/white"
+                android:id="@+id/tx4"
+                />
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Ver"
+                android:background="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:id="@+id/b4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/lh5"
+            app:layout_constraintLeft_toRightOf="@+id/lv1"
+            app:layout_constraintRight_toLeftOf="@+id/lv2"
+            app:layout_constraintBottom_toTopOf="@+id/lh6">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:textColor="@android:color/white"
+                android:id="@+id/tx5"
+                />
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Ver"
+                android:background="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:id="@+id/b5" />
+
+        </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/botbusc"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content"
+            android:text="Buscar Rivales"
+            app:layout_constraintRight_toLeftOf="@+id/lv2"
+            app:layout_constraintTop_toBottomOf="@+id/lh6"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/lh2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toRightOf="@+id/lv1"
+            app:layout_constraintRight_toLeftOf="@+id/lv2"
+            app:layout_constraintTop_toBottomOf="@+id/lh1"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/tx1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/white"
+                android:layout_weight="3"
+                />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/b1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:text="Ver" />
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

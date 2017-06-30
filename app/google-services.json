@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "567670296593",
+    "firebase_url": "https://footballteamfinder-e12d7.firebaseio.com",
+    "project_id": "footballteamfinder-e12d7",
+    "storage_bucket": "footballteamfinder-e12d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567670296593:android:da4cb5e629c0d736",
+        "android_client_info": {
+          "package_name": "com.curso.footballteamfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567670296593-oc1ahp68ipj7uiq2lc807uahs4qfvumt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.curso.footballteamfinder",
+            "certificate_hash": "6e9de6eaf12f856e664cb73827438aef99ea5997"
+          }
+        },
+        {
+          "client_id": "567670296593-k0tapusecgdp9s8o04q9nl6461oauac4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb7FcPvwE4p-ePZ5Kon7N31mSEcVpvhJw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567670296593-k0tapusecgdp9s8o04q9nl6461oauac4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

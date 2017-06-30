@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">FootballTeamFinder</string>
+    <string-array name="colores">
+        <item>Rojo</item>
+        <item>Gris</item>
+        <item>Amarillo</item>
+        <item>Verde</item>
+        <item>Blanco</item>
+        <item>Negro</item>
+        <item>Naranjo</item>
+        <item>Azul</item>
+        <item>Rosado</item>
+        <item>Cafe</item>
+    </string-array>
+    <string-array name="valoraciones">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="ubicaciones">
+        <item>Concepción</item>
+        <item>Talcahuano</item>
+        <item>San Pedro</item>
+        <item>Chiguayante</item>
+        <item>Hualén</item>
+    </string-array>
+    <string name="title_activity_actividad_general">ActividadGeneral</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>ç
+    <string name="ubc"> <u>Ubicacion</u>: </string>
+    <string name="clc"> <u>Color 1</u>: </string>
+    <string name="clc2"> <u>Color 2</u>: </string>
+    <string name="vlc"> <u>Valracion(1-10)</u>: </string>
+</resources>

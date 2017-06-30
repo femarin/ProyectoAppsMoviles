@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cr"
+    android:background="@drawable/login_sinletras"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lv2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="346dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lh1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lv1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="39dp" />
+    <android.support.constraint.Guideline
+        android:id="@+id/lv15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="39dp" />
+    <android.support.constraint.Guideline
+        android:id="@+id/lv17"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="39dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/lh2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/lh3"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/lh4"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/lh5"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/lh6"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.81" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toLeftOf="@+id/lv2"
+        app:layout_constraintBottom_toTopOf="@+id/lh2"
+        app:layout_constraintLeft_toLeftOf="@+id/lv1"
+        app:layout_constraintTop_toTopOf="@+id/lh1">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:id="@+id/tx"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:text="Información de Equipo Rival"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toLeftOf="@+id/lv2"
+        app:layout_constraintBottom_toTopOf="@+id/lh3"
+        app:layout_constraintLeft_toLeftOf="@+id/lv1"
+        app:layout_constraintTop_toTopOf="@+id/lh2">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:id="@+id/tx1"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:text="Nombre Equipo"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tx2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="Valoración"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toLeftOf="@+id/lv2"
+        app:layout_constraintBottom_toTopOf="@+id/lh4"
+        app:layout_constraintLeft_toLeftOf="@+id/lv1"
+        app:layout_constraintTop_toTopOf="@+id/lh3">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@+id/tx3"
+            android:text="Ciudad"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:id="@+id/tx4"
+            android:text="Edad Promedio"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toLeftOf="@+id/lv2"
+        app:layout_constraintBottom_toTopOf="@+id/lh5"
+        app:layout_constraintLeft_toLeftOf="@+id/lv1"
+        app:layout_constraintTop_toTopOf="@+id/lh4">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@+id/tx5"
+            android:text="Nombre Capitan"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:id="@+id/coltex"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="15dp"
+            android:text="Color 1: \nColor 2: "
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:text="Nº Contacto: "
+        app:layout_constraintLeft_toRightOf="@+id/lv1"
+        app:layout_constraintTop_toBottomOf="@+id/lh5"
+        app:layout_constraintBottom_toTopOf="@+id/lh6"
+        app:layout_constraintRight_toLeftOf="@+id/lv15"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/llama"
+        android:scaleY="0.4"
+        android:scaleX="0.4"
+        android:id="@+id/bllamar"
+        app:layout_constraintLeft_toRightOf="@+id/lv15"
+        app:layout_constraintTop_toBottomOf="@+id/lh5"
+        app:layout_constraintBottom_toTopOf="@+id/lh6"
+        app:layout_constraintRight_toLeftOf="@+id/lv17"/>
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_weight="1"
+        android:text="Aceptar"
+        android:id="@+id/b1"
+        app:layout_constraintTop_toBottomOf="@+id/lh6"
+        app:layout_constraintRight_toLeftOf="@+id/lv2"
+        app:layout_constraintBottom_toTopOf="@+id/lh6" />
+
+</android.support.constraint.ConstraintLayout>
+</LinearLayout>
