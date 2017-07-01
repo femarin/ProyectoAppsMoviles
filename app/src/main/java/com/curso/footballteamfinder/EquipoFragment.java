@@ -146,50 +146,8 @@ public class EquipoFragment extends Fragment {
 
             }
         });
-       /* baseref.child(userid).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                int i = 0;
-                valprom = 0;
-                edprom = 0;
-                numjug = 0;
-                for (DataSnapshot d : dataSnapshot.child("jugadores").getChildren()){
-                    System.out.println(d.getValue(Jugador.class).getNombre());
-                    System.out.println(i);
-                    i++;
-                        valprom = valprom + d.getValue(Jugador.class).getValoracion();
-                        edprom = edprom + d.getValue(Jugador.class).getEdad();
-                        vj.add(d.getValue(Jugador.class));
-                        numjug = vj.size();
-                        float prom = valprom/numjug;
-                        int prom2 = edprom/numjug;
-                        score.setText("Valorizacion: "+Float.toString(prom));
-                        edad.setText("Edad promedio: "+Integer.toString(prom2));
-                        System.out.println("Edad: "+edprom);
-                        System.out.println("Val: "+valprom);
-                        System.out.println(numjug);
-                }
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
 
-            }
-        });*/
         return view;
-      //  return inflater.inflate(R.layout.fragment_equipo, container, false);
     }
 
 }
-
-
-/*valprom = valprom + d.child("jugadores").child("Capitan").getValue(Jugador.class).getValoracion();
-        edprom = edprom + dataSnapshot.child("jugadores").child("Capitan").getValue(Jugador.class).getEdad();
-        vj.add(dataSnapshot.child("jugadores").child("Capitan").getValue(Jugador.class));
-        numjug = vj.size();
-        float prom = valprom/numjug;
-        int prom2 = edprom/numjug;
-        score.setText("Valorizacion: "+Float.toString(prom));
-        edad.setText("Edad promedio: "+Integer.toString(prom2));
-        System.out.println("Edad: "+edprom);
-        System.out.println("Val: "+valprom);
-        System.out.println(numjug);*/

@@ -22,7 +22,12 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
@@ -34,11 +39,11 @@ public class PartidosFragment extends Fragment {
     Map<String,Float> eqcercanos = new HashMap<>();
     Button b1, b2, b3, b4, b5,bbuscar;
     Vector<String> aux = new Vector<String>();
+    HashMap<String,Float> distordfinal= new HashMap<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_partidos,container,false);
-        // Inflate the layout for this fragment
         final Vector<TextView> eqps = new Vector<TextView>();
         ((ActividadGeneral) getActivity()).t1 = (TextView) view.findViewById(R.id.tx1);
         ((ActividadGeneral) getActivity()).t1.setText("Nombre: "+"\n"+"Valoracion: "+"\n"+"Ciudad: "+"\n"+"Edad Promedio: ");
@@ -115,20 +120,25 @@ public class PartidosFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 System.out.println("numero de equipos : "+((ActividadGeneral) getActivity()).numequipos);
-                creadistancia(equs,eqr,distord);
+                Map<String,Float> asd = creadistancia(equs,eqr,distord,distordfinal);
                 obtenerdistancia(equs,distord,eqr,distancias);
-                Set<String> str = distancias.keySet();
+                Set<String> str = asd.keySet();
+                Set<String> str2 = eqr.keySet();
                 aux = new Vector<String>();
                 int i = 0;
                 for (String s :
                         str) {
-                    System.out.println(s);
-                    aux.add(i,s);
-                    i++;
+                    for (String s2 :
+                            str2) {
+                        if(s.equals(s2)){
+                            aux.add(i,s);
+                            i++;
+                        }
+                    }
+
                 }
-                Collections.reverse(aux);
                 for (int j = 0;j<((ActividadGeneral) getActivity()).numequipos;j++){
-                    Equipo a = distancias.get(aux.get(j));
+                    Equipo a = eqr.get(aux.get(j));
                     eqps.get(j).setText("Nombre: "+a.getName()+"\n"+"Valoracion: "+a.getScore()+"\n"+"Ciudad: "+a.getCity()+"\n"+"Edad Promedio: "+a.getAvage());
                 }
 
@@ -142,17 +152,14 @@ public class PartidosFragment extends Fragment {
                 new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        //Get map of users in datasnapshot
                         int a = 0;
                         for (DataSnapshot d: dataSnapshot.getChildren()
                              ) {
-                            //Aqui van las key de los usuarios
                             if (!d.getKey().equals(userid)){
                                 if (d.hasChild("Equipo")){
                                     Equipo eq = d.child("Equipo").getValue(Equipo.class);
                                     eqr.put(d.getKey(),eq);
                                     eqcercanos.put(d.getKey(),eq.getScore());
-                                    System.out.println(eqr.get(d.getKey()).getName());
                                     a++;
                                     ((ActividadGeneral) getActivity()).numequipos = a;
                                 }
@@ -170,14 +177,17 @@ public class PartidosFragment extends Fragment {
     }
 
 
-    void creadistancia(Equipo eq, Map<String,Equipo> meq, Vector<Float> v){
+    Map creadistancia(Equipo eq, Map<String,Equipo> meq, Vector<Float> v, HashMap<String,Float> ordenado){
         v.removeAllElements();
         Set<String> s = meq.keySet();
         for (String str:
              s) {
             v.add(Math.abs(eq.getScore()-meq.get(str).getScore()));
+            ordenado.put(str,Math.abs(eq.getScore()-meq.get(str).getScore()));
         }
         Collections.sort(v);
+        Map<Integer, String> map = sortByValues(ordenado);
+        return map;
     }
     void obtenerdistancia(Equipo eq, Vector<Float> v,Map<String,Equipo> meq,Map<String,Equipo> ord){
         ord.clear();
@@ -188,7 +198,6 @@ public class PartidosFragment extends Fragment {
             while (i<((ActividadGeneral) getActivity()).numequipos)
             {
                 if (Math.abs(eq.getScore()-meq.get(s).getScore()) == v.get(j) ){
-                //    System.out.println(Math.abs(eq.getScore()-meq.get(s).getScore()) + "  <----------> " + v.get(j) );
                     ord.put(s,meq.get(s));
                     i++;
                 }
@@ -203,21 +212,20 @@ public class PartidosFragment extends Fragment {
 
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        System.out.println("Se ha resumidoooooooooooooooooooooo");
+    private static HashMap sortByValues(HashMap map) {
+        List list = new LinkedList(map.entrySet());
+        Collections.sort(list, new Comparator() {
+            public int compare(Object o1, Object o2) {
+                return ((Comparable) ((Map.Entry) (o1)).getValue()).compareTo(((Map.Entry) (o2)).getValue());
+            }
+        });
+        HashMap sortedHashMap = new LinkedHashMap();
+        for (Iterator it = list.iterator(); it.hasNext();) {
+            Map.Entry entry = (Map.Entry) it.next();
+            sortedHashMap.put(entry.getKey(), entry.getValue());
+        }
+        return sortedHashMap;
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        System.out.println("Se ha startiadooooooooooooooooooooo");
-    }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        System.out.println("Se ha pausadoooooooooooooooooooooooo");
-    }
 }

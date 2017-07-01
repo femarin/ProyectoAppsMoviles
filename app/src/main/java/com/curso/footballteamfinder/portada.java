@@ -20,41 +20,27 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class portada extends AppCompatActivity {
-    private String userID;
     FirebaseAuth.AuthStateListener mauthlistener;
-    int salta;
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.port);
-      //getSupportActionBar().hide();//Ocultar ActivityBar anterior
-        FirebaseUser user =FirebaseAuth.getInstance().getCurrentUser();
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference bref = database.getReference(FirebaseReference.TEAMS_REFERENCE);
-
         mauthlistener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 System.out.print(user);
                 if (user != null){
-                    //Aqui podria ir el start activity
                     System.out.println("Sesion Iniciada con mail: "+user.getEmail());
-                    //se salta la actividad si se inicio sesion
                    Toast.makeText(portada.this,"Cargando", 2000).show();
 
                     Timer timer = new Timer();
                     timer.schedule(new TimerTask() {
 
                         public void run() {
-
-
                             final Intent a2 = new Intent(portada.this,ActividadGeneral.class);
                             finish();
                             startActivity(a2);
-
-
-                            //here you can start your Activity B.
                         }
 
                     }, 2000);
@@ -69,7 +55,6 @@ public class portada extends AppCompatActivity {
                         public void run() {
                             finish();
                             startActivity(a);
-                            //here you can start your Activity B.
                         }
 
                     }, 2000);
