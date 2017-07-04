@@ -138,8 +138,10 @@ public class PartidosFragment extends Fragment {
 
                 }
                 for (int j = 0;j<((ActividadGeneral) getActivity()).numequipos;j++){
-                    Equipo a = eqr.get(aux.get(j));
-                    eqps.get(j).setText("Nombre: "+a.getName()+"\n"+"Valoracion: "+a.getScore()+"\n"+"Ciudad: "+a.getCity()+"\n"+"Edad Promedio: "+a.getAvage());
+                    if(j<5){
+                        Equipo a = eqr.get(aux.get(j));
+                        eqps.get(j).setText("Nombre: "+a.getName()+"\n"+"Valoracion: "+a.getScore()+"\n"+"Ciudad: "+a.getCity()+"\n"+"Edad Promedio: "+a.getAvage());
+                    }
                 }
 
             }
